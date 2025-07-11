@@ -1,0 +1,3 @@
+web app
+juego de adivinar la nota drone
+llevar registro de la cantidad de aciertos y fallos
