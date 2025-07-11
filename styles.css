@@ -27,3 +27,9 @@ button:hover {
 .oculto{
     display:none;
 }
+
+footer {
+    padding-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+}
