@@ -4,7 +4,7 @@ body {
     color: white;
     font-size: larger;
 }
-h1 {
+h1, .verde {
     color: #05F240;
     font-size: larger;
     font-weight: bolder;
