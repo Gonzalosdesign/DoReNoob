@@ -1,4 +1,5 @@
 const notas = ["A", "A# / Bb", "B", "C", "C# / Db", "D", "D# / Eb", "E", "F", "F# / Gb", "G", "G# / Ab",];
+let notaAlAzar;
 
 function reproducirNota(){
     // antes de empezar apaga la nota previa
@@ -19,7 +20,7 @@ function reproducirNota(){
     //console.log("tipo de milesimas: ");
     //console.log(typeof(milesimas));
     // divide el valor en 12 y le asigna a otra variable
-    let notaAlAzar = milesimas % 12;
+    notaAlAzar = milesimas % 12;
     //console.log("milesimas: ");
     //console.log(milesimas);
     //console.log("nota al azar: ");
@@ -38,6 +39,15 @@ function pausarNota(){
     location.reload();
 }
 
+//acá te deja elegir nota y la compara con la que eligió el sistema
+// pero hay un problema porque notal al azar sale como undefined, creo que es problema de scope
 function elegirNota(notaElegida){
     console.log("Nota Elegida: " + notas[notaElegida]);
+    console.log("Nota al azar era: " + notas[notaAlAzar]);
+    if (notaElegida = notaAlAzar) {
+        console.log("¡Tenés razón!")
+    }
+    else {
+        console.log("Te equivocaste sordo! era un " + notas[notaAlAzar] + " de manual!");
+    }
 }
