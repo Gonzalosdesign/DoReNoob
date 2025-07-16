@@ -31,9 +31,13 @@ function reproducirNota(){
     sonido.play();
     // asocia el numero con la posicion del string dentro dl array
     notaAlAzar = notas[notaAlAzar];
-    console.log(`nota elegida: ${notaAlAzar}`);
+    console.log(`nota al azar: ${notaAlAzar}`);
 }
 
 function pausarNota(){
     location.reload();
+}
+
+function elegirNota(notaElegida){
+    console.log("Nota Elegida: " + notas[notaElegida]);
 }
