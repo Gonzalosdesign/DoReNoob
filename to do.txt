@@ -1,1 +1,3 @@
 - debería mostrar los resultados en el propio html sin necesidad de window alert
+- agregar un timer qe diga cuanto demoraste en responder
+- quizas se podría agregar un ranking y que ls resultados queden guardados
