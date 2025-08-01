@@ -28,8 +28,6 @@ function reproducirNota(){
     // asocia el numero con la posicion del string dentro del array
     nombreNotaAlAzar = notas[indiceNotaAlAzar];
     console.log(`nota al azar: ${nombreNotaAlAzar}`);
-    console.log("Aciertos: " + aciertos);
-    console.log("Fallos: " + fallos);
 }
 
 function recargar(){
@@ -39,8 +37,6 @@ function recargar(){
 
 // acá te deja elegir nota, la compara con la que eligió el sistema y te devuelve un mensaje con el resultado
 function elegirNota(notaElegida){
-    console.log("Nota Elegida: " + notas[notaElegida]);
-    console.log("Nota al azar era: " + notas[indiceNotaAlAzar]);
     if (notaElegida === indiceNotaAlAzar) {
         aciertos++;
         let mensaje = "¡Tenés razón!\n";
@@ -57,4 +53,6 @@ function elegirNota(notaElegida){
         window.alert(mensaje);
         sonido.pause();
     }
+    //oculta el teclado para que no puedas usarlo despues de que te dijo que nota era
+    teclado.classList.add("oculto");
 }
