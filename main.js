@@ -1,10 +1,17 @@
 const notas = ["A", "A# / Bb", "B", "C", "C# / Db", "D", "D# / Eb", "E", "F", "F# / Gb", "G", "G# / Ab",];
 let indiceNotaAlAzar;
 let nombreNotaAlAzar;
+let sonido;
+let teclado = document.querySelector(".oculto");
+let aciertos = 0;
+let fallos = 0;
 
 function reproducirNota(){
-    // antes de empezar apaga la nota previa
-    let teclado = document.querySelector(".oculto");
+    // antes de empezar apaga la nota previa si ya estaba sonando
+    if (sonido !== undefined){
+        sonido.pause();
+    }
+
     // Mostrar un nuevo teclado
     teclado.classList.remove("oculto");
 
@@ -16,11 +23,13 @@ function reproducirNota(){
     indiceNotaAlAzar = milesimas % 12;
     
     // segun el valor de la varibale indice define el archivo y lo reproduce
-    let sonido = new Audio ("notas/" + indiceNotaAlAzar + ".mp3");
+    sonido = new Audio ("notas/" + indiceNotaAlAzar + ".mp3");
     sonido.play();
     // asocia el numero con la posicion del string dentro del array
     nombreNotaAlAzar = notas[indiceNotaAlAzar];
     console.log(`nota al azar: ${nombreNotaAlAzar}`);
+    console.log("Aciertos: " + aciertos);
+    console.log("Fallos: " + fallos);
 }
 
 function pausarNota(){
@@ -28,15 +37,24 @@ function pausarNota(){
     location.reload();
 }
 
-// acá te deja elegir nota y la compara con la que eligió el sistema
-// pero hay un problema porque nota al azar sale como undefined, creo que es problema de scope
+// acá te deja elegir nota, la compara con la que eligió el sistema y te devuelve un mensaje con el resultado
 function elegirNota(notaElegida){
     console.log("Nota Elegida: " + notas[notaElegida]);
     console.log("Nota al azar era: " + notas[indiceNotaAlAzar]);
     if (notaElegida === indiceNotaAlAzar) {
-        console.log("¡Tenés razón!")
+        aciertos++;
+        let mensaje = "¡Tenés razón!\n";
+        mensaje += "Elegiste " + notas[notaElegida] + " y era un " + notas[indiceNotaAlAzar] + "\n";
+        mensaje +=   "Aciertos: " + aciertos + "\nFallos: " + fallos;
+        window.alert(mensaje);
+        sonido.pause();
     }
     else {
-        console.log("Te equivocaste sordo! era un " + notas[indiceNotaAlAzar] + " de manual!");
+        fallos++;
+        let mensaje = "Te equivocaste sordo!\n";
+        mensaje += "Elegiste " + notas[notaElegida] + " y era un " + notas[indiceNotaAlAzar] + " de manual!\n";
+        mensaje +=   "Aciertos: " + aciertos + "\nFallos: " + fallos;
+        window.alert(mensaje);
+        sonido.pause();
     }
 }
