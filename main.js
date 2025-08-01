@@ -32,7 +32,7 @@ function reproducirNota(){
     console.log("Fallos: " + fallos);
 }
 
-function pausarNota(){
+function recargar(){
     //al presionar el botòn se recarga la página
     location.reload();
 }

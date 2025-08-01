@@ -1,3 +1,2 @@
-web app
-juego de adivinar la nota drone
-llevar registro de la cantidad de aciertos y fallos
+- una vez que te dijo que nta era no debería dejarte seguir apretando teclas porque ya sabes la correcta
+- debería mostrar los resultados en el propio html sin necesidad de window alert
