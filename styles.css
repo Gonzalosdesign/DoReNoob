@@ -15,13 +15,19 @@ h1, .verde {
 }
 
 button {
+    background: none;
+    text-decoration: none;
+    border: none;
+}
+
+#playButton, #stopButton{
     padding: 10px;
     background-color: #636A89;
     color: white;
     border: none;
     border-radius: 10%;
 }
-button:hover {
+#playButton:hover, #stopButton:hover {
     padding: 10px;
     background-color: #A65371;    
     color: white;
@@ -38,8 +44,9 @@ button:hover {
     color: #434A59;
 }
 
-.blackKey {
+.blackKey, .blackKey button {
     background-color: #102030;
+    color: aliceblue;
 }
 
 footer {
