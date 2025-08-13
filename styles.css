@@ -39,14 +39,20 @@ button {
     display:none;
 }
 
+#teclado{
+    background-color: aliceblue;
+}
+
 .whiteKey{
     background-color: papayawhip;
     color: #434A59;
+    height: 10vh;
 }
 
 .blackKey, .blackKey button {
     background-color: #102030;
     color: aliceblue;
+    height: 5vh;
 }
 
 footer {
