@@ -1,61 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>Do Re Noob</h1>
-    <h2>¿Tenés oído musical… o sos un Do Re Noob?</h2>
-    <p id="desripcion">Poné a prueba tu capacidad para reconocer notas musicales en este juego cuya facilidad es inversamente proporcional a tu nivel de sordera. Escuchá la nota que suena y tratá de adivinar cuál es, podés usar tu instrumento para encontrarla (o pasar vergüenza). ¿Sos un maestro del oído o un sordo con entusiasmo? ¡Descubrilo jugando!</p>
-    <button onclick="reproducirNota()">Tocá</button>
-    <button onclick="recargar()">Recargar</button>
-    <div class="oculto">
-        <p>¿Qué nota es?</p>
-        <table>
-            <tbody>
-                <tr>
-                    <button onclick="elegirNota(0)">A</button>
-                </tr>
-                <tr>
-                    <button onclick="elegirNota(1)">A# / Bb</button>
-                </tr>
-                <tr>
-                    <button onclick="elegirNota(2)">B</button>
-                </tr>
-                <tr>
-                    <button onclick="elegirNota(3)">C</button>
-                </tr>
-                <tr>
-                    <button onclick="elegirNota(4)">C# / Db</button>
-                </tr>
-                <tr>
-                    <button onclick="elegirNota(5)">D</button>
-                </tr>
-                <tr>
-                    <button onclick="elegirNota(6)">D# / Eb</button>
-                </tr>
-                <tr>
-                    <button onclick="elegirNota(7)">E</button>
-                </tr>
-                <tr>
-                    <button onclick="elegirNota(8)">F</button>
-                </tr>
-                <tr>
-                    <button onclick="elegirNota(9)">F# / Gb</button>
-                </tr>
-                <tr>
-                    <button onclick="elegirNota(10)">G</button>
-                </tr>
-                <tr>
-                    <button onclick="elegirNota(11)">G# / Ab</button>
-                </tr>
-            </tbody>
-        </table>
-</div>
-<footer>gonzalo sordo design</footer>  
-<script src="main.js"></script>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <title>Do Re Noob Inicio</title>
+    </head>
+    <body>
+      <body>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <h1 class="title">Do Re Noob</h1>
+                <h2>¿Tenés oído musical… o sos un Do Re Noob?</h2>
+                <p id="desripcion">Poné a prueba tu capacidad para reconocer notas musicales en este juego cuya facilidad es inversamente proporcional a tu nivel de sordera. Escuchá la nota que suena y tratá de adivinar cuál es, podés usar tu instrumento para encontrarla (o pasar vergüenza). ¿Sos un maestro del oído o un sordo con entusiasmo? ¡Descubrilo jugando!</p>
+                <button onclick="reproducirNota()">Tocá</button>
+                <button onclick="recargar()">Recargar</button>
+                <div class="oculto">
+                <p>¿Qué nota es?</p>
+
+                <table>
+                    <tbody>
+                        <tr class="white">
+                            <button onclick="elegirNota(0)">A</button>
+                        </tr>
+                        <tr>
+                            <button onclick="elegirNota(1)">A# / Bb</button>
+                        </tr>
+                        <tr>
+                            <button onclick="elegirNota(2)">B</button>
+                        </tr>
+                        <tr>
+                            <button onclick="elegirNota(3)">C</button>
+                        </tr>
+                        <tr>
+                            <button onclick="elegirNota(4)">C# / Db</button>
+                        </tr>
+                        <tr>
+                            <button onclick="elegirNota(5)">D</button>
+                        </tr>
+                        <tr>
+                            <button onclick="elegirNota(6)">D# / Eb</button>
+                        </tr>
+                        <tr>
+                            <button onclick="elegirNota(7)">E</button>
+                        </tr>
+                        <tr>
+                            <button onclick="elegirNota(8)">F</button>
+                        </tr>
+                        <tr>
+                            <button onclick="elegirNota(9)">F# / Gb</button>
+                        </tr>
+                        <tr>
+                            <button onclick="elegirNota(10)">G</button>
+                        </tr>
+                        <tr>
+                            <button onclick="elegirNota(11)">G# / Ab</button>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="container">
+            <footer>gonzalo sordo design</footer>
+        </div>
+
+      <script src="main.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+      </body>
+  </body>
 </html>

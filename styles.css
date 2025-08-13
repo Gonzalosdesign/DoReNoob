@@ -9,6 +9,11 @@ h1, .verde {
     font-size: larger;
     font-weight: bolder;
 }
+
+.title{
+    margin-top: 5%;
+}
+
 button {
     padding: 10px;
     background-color: #636A89;
@@ -28,8 +33,17 @@ button:hover {
     display:none;
 }
 
+.whiteKey{
+    background-color: papayawhip;
+    color: #434A59;
+}
+
+.blackKey {
+    background-color: #102030;
+}
+
 footer {
-    padding-bottom: 10px;
     position: absolute;
+    padding-bottom: 10px;
     bottom: 0;
 }
